@@ -1,6 +1,8 @@
 <%! from django.utils.translation import ugettext as _ %>
 
 <%namespace name='static' file='static_content.html'/>
+<!link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
 <h2 class="problem-header">
   ${ problem['name'] }
 </h2>
@@ -17,7 +19,7 @@
     <div class="problem-hint" aria-live="polite"></div>
     % endif
     % if check_button:
-    <button class="check ${ check_button }" data-checking="${ check_button_checking }" data-value="${ check_button }"><span class="check-label">${ check_button }</span><span class="sr"> ${_("your answer")}</span></button>
+    <button class="check ${ check_button }" data-checking="${ check_button_checking }" data-value="${ check_button }"><span class="check-label"><i class="fa fa-check"> ${ check_button }</i></span><span class="sr"> ${_("your answer")}</span></button>
     % endif
     % if demand_hint_possible:
     <button class="hint-button" data-value="${_('Hint')}">${_('Hint')}</button>
