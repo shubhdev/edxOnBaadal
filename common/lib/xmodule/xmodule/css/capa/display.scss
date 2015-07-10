@@ -840,7 +840,7 @@ div.problem {
 div.problem .action {
   margin-top: $baseline;
 
-  .save, .check, .show, .reset, .hint-button {
+  .save, .check, .show, .trial, .reset, .hint-button {
     @include margin-right($baseline/2);
     margin-bottom: ($baseline/2);
     height: ($baseline*2);
@@ -907,7 +907,7 @@ div.problem {
     padding: lh();
     border: 1px solid $gray-l3;
   }
-  
+
   .detailed-solution {
     > p:first-child {
       @extend %t-strong;
